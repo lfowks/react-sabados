@@ -1,9 +1,14 @@
-import { Counter } from "./HookUseState/Counter"
+import { MyProvider } from "./HookUseContext/MyContextProvider"
+import ComponentA from "./HookUseContext/components/ComponentA"
+import ComponentD from "./HookUseContext/components/ComponentD"
 
 function App() { 
   return (
     <>
-      <Counter/>
+      <MyProvider>
+        <ComponentA/>
+        <ComponentD/>
+      </MyProvider>
     </>
   )
 }

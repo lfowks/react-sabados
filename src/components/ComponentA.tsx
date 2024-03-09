@@ -1,10 +1,14 @@
+import { useState } from "react"
 import ComponentB from "./ComponentB"
 
 const ComponentA = ({text}: {text: string}) => {
+ 
+  const [newText, setNewText] = useState(text);
+
   return (
     <>
-    <h1>{text}</h1>
-    <ComponentB text={text}/>
+    <h1>{newText}</h1>
+    <ComponentB text={newText} setNewText={setNewText}/>
     </>
   )
 }
